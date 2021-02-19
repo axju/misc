@@ -1,11 +1,11 @@
+import sys
 import socket
 import subprocess
 
-HOST = '0.0.0.0'
-PORT = 5555
+HOST = sys.argv[1] if len(sys.argv) > 1 else '0.0.0.0'
+PORT = int(sys.argv[2] if len(sys.argv) > 2 else 5555)
 
 s = socket.socket()
-
 s.connect((HOST, PORT))
 msg = s.recv(1024).decode()
 print('[*] server:', msg)
