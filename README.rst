@@ -16,3 +16,11 @@ run client:
 .. code:: bash
 
   python3 reverse-shell/client.py 0.0.0.0 5555
+
+Fake ssh
+--------
+run server:
+
+.. code:: bash
+
+  python3 fake-ssh/run.py 2222
